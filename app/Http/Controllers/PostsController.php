@@ -16,7 +16,9 @@ class PostsController extends Controller
     }
 
     public function show($name){
-        $post = Post::query()->where('post_name',$name)->first();
+
+        $post = Post::query()->with('user')->where('post_name',$name)->first();
+        
         return view('frontend.single-post',compact("post"));
     }
 }

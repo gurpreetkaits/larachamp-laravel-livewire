@@ -13,6 +13,18 @@
     border-radius: 40px;
 }
 
-#frontend-nav-bar .nav-listitem:hover{
-    background-color: aliceblue;
+#frontend-nav-bar .nav-listitem:hover,#frontend-nav-bar .nav-listitem:active{
+    /* background-color: aliceblue; */
+    background-color: #66666616;
+}
+.active{
+    font-size: 13px;
+    transition: .2s;
+    border-radius: 40px;
+    background-color: #66666616;
+}
+.siteline{
+    font-size: 100px;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

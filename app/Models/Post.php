@@ -10,6 +10,10 @@ class Post extends Model
     use HasFactory;
 
     protected $fillable = [
-        'author_id','title','content','status',''
+        'author_id','title','content','status'
     ];
+
+    public function user(){
+        return $this->hasOne(User::class,'id','post_author');
+    }
 }
