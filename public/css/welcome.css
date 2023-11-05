@@ -1,0 +1,18 @@
+#frontend-nav-bar{
+    margin: 30px 0px;
+    padding:4px;
+    border: 0.4px solid #e1e1e1;
+    background-color: #ffffff;
+    border-radius: 29px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#frontend-nav-bar .nav-listitem{
+    font-size: 13px;
+    transition: .2s;
+    border-radius: 40px;
+}
+
+#frontend-nav-bar .nav-listitem:hover{
+    background-color: aliceblue;
+}

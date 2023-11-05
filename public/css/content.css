@@ -1,0 +1,29 @@
+#post-row{
+    /* border-left: 1px solid #666; */
+    border-radius: 2px;
+    padding: 2px;
+    margin: 30px 0px;
+}
+.post-row-content{
+    padding: 12px;
+    border-radius: 13px;
+    transition: .4s;
+}
+.post-row-content:hover{
+    /* border: 0.4px solid #e1e1e1; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* border: 0.4px solid #e1e1e1; */
+}
+
+.content-excerpt{
+    font-size: 15px;
+    color: #878787;
+}
+.post-heading{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.post-about-details{
+    color: #666;
+}
