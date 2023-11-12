@@ -5,7 +5,7 @@
                 <div class="timeline-circle"></div>
                 <div class="mt-2">{{ date('Y-m-d H:s ', strtotime($post->post_modified)) }}</div>
             </div>
-            
+
             <div class="col-lg-8 post-row-content">
                 <p class="post-heading">{{ $post->post_title }}</p>
                 @php
@@ -16,7 +16,8 @@
                     more..</a>
             </div>
         </div>
-    @empty
+        @empty
         Not found
-    @endforelse
+        @endforelse
+        {{-- {{ $posts->links() }} --}}
 </div>

@@ -6,36 +6,13 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <style>
-                .dropDownCustomStyle{
-                    border-radius: 12px;
-                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-                }
-                .dropdown-menu {
-                    border: 0px solid !important;
-                    margin: 5px;
-                }
-                .dropdown-menu:hover {
-                    border: 0px solid !important;
-                }
-                .dropdown-item:hover{
-                    background-color:transparent !important; 
-                }
-            </style>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto" id="frontend-nav-bar">
                     <li class="nav-item px-1 nav-listitem">
-                        <a class="nav-link active" aria-current="page" href="/">Blogs</a>
+                        <a class="nav-link @if(request()->routeIs('about.index')) active @endif" href="/about" wire:navigate>About Us</a>
                     </li>
-                    @forelse (categories() as $category)
                     <li class="nav-item px-1 nav-listitem">
-                        <a class="nav-link text-capitalize" aria-current="page" href="/category/{{$category->slug}}">{{($category->name)}}</a>
-                    </li>
-                    @empty
-                        
-                    @endforelse
-                    <li class="nav-item px-1 nav-listitem">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link @if(request()->routeIs('blogs')) active @endif" aria-current="page" wire:navigate href="{{route('blogs')}}">Blogs</a>
                     </li>
                 </ul>
             </div>
