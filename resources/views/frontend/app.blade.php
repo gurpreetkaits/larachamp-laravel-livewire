@@ -26,7 +26,7 @@
             @yield('content')
         </div>
     </div>
-    @include('frontend.components.footer')
+    {{-- @include('frontend.components.footer') --}}
     @stack('scripts')
     <script src="{{ asset('js/script.js') }}"></script>
     @livewireScripts

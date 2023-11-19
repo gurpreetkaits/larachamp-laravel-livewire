@@ -4,7 +4,7 @@
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.css') }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
-           folder instead of downloading all of them to reduce the load. -->
+               folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('admin/dist/css/skins/_all-skins.min.css') }}">
 @endsection
 @section('main-content')
@@ -40,7 +40,6 @@
                                     <tr>
                                         <th>S.No</th>
                                         <th>Title</th>
-                                        <th>Sub Title</th>
                                         <th>Slug</th>
                                         <th>Creatd At</th>
                                         <th>Edit</th>
@@ -51,23 +50,21 @@
                                     @foreach ($posts as $post)
                                         <tr>
                                             <td>{{ $loop->index + 1 }}</td>
-                                            <td>{{ $post->post_title }}</td>
-                                            <td>{{ $post->post_excerpt }}</td>
-                                            <td>{{ $post->post_name }}</td>
-                                            <td>{{ $post->post_modified }}</td>
-                                            <td><a href="{{ route('post.edit', $post->ID) }}"><span
+                                            <td>{{ $post->title }}</td>
+                                            <td>{{ $post->url }}</td>
+                                            <td>{{ $post->created_at }}</td>
+                                            <td><a href="{{ route('post.edit', $post->id) }}"><span
                                                         class="glyphicon glyphicon-edit"></span></a></td>
                                             <td>
-                                                <form id="delete-form-{{ $post->ID }}" method="post"
-                                                    action="{{ route('post.destroy', $post->ID) }}" style="display: none">
+                                                <form id="delete-form-{{ $post->id }}" method="post"
+                                                    action="{{ route('post.destroy', $post->id) }}" style="display: none">
                                                     @csrf
                                                     @method('DELETE')
                                                 </form>
-                                                <a href="#" onclick="deletePost({{ $post->ID }})">
-                                                  <span class="glyphicon glyphicon-trash"></span>
-                                              </a>
+                                                <a href="#" onclick="deletePost({{ $post->id }})">
+                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                </a>
                                             </td>
-                                        </tr>
                                         </tr>
                                     @endforeach
 

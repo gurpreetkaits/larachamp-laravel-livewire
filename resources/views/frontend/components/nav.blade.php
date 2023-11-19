@@ -12,7 +12,7 @@
                         <a class="nav-link @if(request()->routeIs('about.index')) active @endif" href="/about" wire:navigate>About Us</a>
                     </li>
                     <li class="nav-item px-1 nav-listitem">
-                        <a class="nav-link @if(request()->routeIs('blogs')) active @endif" aria-current="page" wire:navigate href="{{route('blogs')}}">Blogs</a>
+                        <a class="nav-link @if(request()->routeIs('blogs') || request()->routeIs('post.show')) active @endif" aria-current="page" wire:navigate href="{{route('blogs')}}">Blogs</a>
                     </li>
                 </ul>
             </div>

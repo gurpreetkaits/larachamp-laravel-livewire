@@ -34,6 +34,5 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
    @section('headSection')
   @show

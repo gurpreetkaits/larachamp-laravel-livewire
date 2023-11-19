@@ -23,3 +23,7 @@
     font-weight: bold;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.categoryTitle{
+    font-size: 11px;
+    margin-top: 4px !important;
+}
