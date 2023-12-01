@@ -17,7 +17,6 @@ class Blogs extends Component
     }
     public function render()
     {
-        // $this->categories = (new Category())->getAll();
         return view('livewire.blogs');
     }
 }   

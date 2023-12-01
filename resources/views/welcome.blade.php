@@ -1,19 +1,18 @@
 @extends('frontend.app')
 @section('content')
-    <div class="banner container py-5">
-        <h1 class="siteline">
-            Let's Learn And Build Together
-        </h1>
-    </div>
-    @include('frontend.components.search')
-    <section id="blogPosts">
-        @include('frontend.content', ['posts' => $posts])
-    </section>
+{{-- <div class="banner container py-5">
+    <h1 class="siteline">
+        Let's Learn And Build Together
+    </h1>
+</div> --}}
+<section id="blogPosts">
+    @include('frontend.content', ['posts' => $posts])
+</section>
 @endsection
 @section('title', 'Blog')
 @push('scripts')
-    <script>
-        let typeTimout;
+<script>
+    let typeTimout;
         $(document).on('keyup', '#searchBoxForPosts', function() {
             let search = $(this).val();
             // if(!search){
@@ -35,8 +34,8 @@
                 });
             }, 300);
         });
-    </script>
+</script>
 @endpush
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/searchbox.css') }}">
+<link rel="stylesheet" href="{{ asset('css/searchbox.css') }}">
 @endpush

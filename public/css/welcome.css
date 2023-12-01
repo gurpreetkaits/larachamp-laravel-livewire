@@ -13,9 +13,10 @@
     border-radius: 40px;
 }
 
-.active {
+.nav-link.active {
     /* fontrgba(102, 102, 102, 0.086)px; */
     border-radius: 40px;
+    padding: 8px 17px !important;
     background-color: #66666616;
 }
 .siteline {
@@ -26,4 +27,8 @@
 .categoryTitle{
     font-size: 11px;
     margin-top: 4px !important;
+}
+
+.nav-listitem a{
+    margin: 3px 0 !important;
 }

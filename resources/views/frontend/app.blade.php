@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
     <link rel="icon" href="{{asset('images/gurpreet.jpeg')}}" type="image/x-icon">
-    {{-- <link rel="icon" fac --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {{--
+    <link rel="icon" fac --}} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Open+Sans&family=Outfit:wght@500&family=Poppins:wght@500&family=Roboto&display=swap"
         rel="stylesheet">
@@ -16,7 +17,10 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
     @stack('styles')
     @livewireStyles
 </head>
@@ -28,8 +32,9 @@
             @yield('content')
         </div>
     </div>
-    {{-- @include('frontend.components.footer') --}}
+    @include('frontend.components.footer')
     @stack('scripts')
+    
     <script src="{{ asset('js/script.js') }}"></script>
     @livewireScripts
 </body>
