@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <input type="submit" class="btn btn-primary">
-                                    <a href='{{ route('post.index') }}' class="btn btn-warning">Back</a>
+                                    <a href='{{ route(' post.index') }}' class="btn btn-warning">Back</a>
                                 </div>
                             </div>
                         </div>

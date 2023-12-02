@@ -18,20 +18,24 @@ class PostsController extends Controller
 
     public function index(Request $request, $category = 'all')
     {
-        $posts = Post::query()->with(['category' => function ($query) use ($category) {
-            if($category == 'all'){
-                return;
-            }
-            return $query->where('name', $category);
-        }])->where(['status' => 'published'])
+        $posts = Post::query()
+            ->where('status', 'published')
             ->orderBy('id', 'desc');
+
+        if ($category !== 'all') {
+            $posts->whereHas('category', function ($query) use ($category) {
+                $query->where('slug', $category);
+            });
+        }
+
         $categories = (new Category())->getAll();
         $tags = (new Tag())->getAll();
 
-        if (request()->ajax()) {
+        if ($request->ajax()) {
             $posts = $posts->where('title', 'like', "%$request->search%")->paginate(10);
             return view('frontend.content', compact('posts', 'categories', 'tags'));
         }
+
         $posts = $posts->paginate(10);
         return view('welcome', compact('posts', 'categories', 'tags'));
     }

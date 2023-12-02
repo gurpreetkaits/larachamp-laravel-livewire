@@ -1,0 +1,103 @@
+/* Light mode styles */
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Additional styles for dark mode elements */
+.dark-mode .categoryTitle,
+.dark-mode .dark-global-button {
+    color: #fff;
+}
+
+/* Styles for dark mode switch */
+.switch-container {
+    display: inline-block;
+    position: relative;
+}
+
+.neumorphic-label {
+    background-color: #e0e0e0;
+    box-shadow: inset 6px 6px 10px #bcbcbc, inset -6px -6px 10px #ffffff;
+}
+
+.neumorphic-label i {
+    color: #555;
+}
+
+.neumorphic-label .ball {
+    background-color: #fff;
+}
+
+.neumorphic-switch:checked + .neumorphic-label {
+    background-color: #555;
+    box-shadow: inset 6px 6px 10px #363636, inset -6px -6px 10px #777;
+}
+
+.neumorphic-switch:checked + .neumorphic-label i {
+    color: #fff;
+}
+
+.neumorphic-switch:checked + .neumorphic-label .ball {
+    transform: translateX(24px);
+}
+
+.readMoreButton{
+    color: #000;
+}
+.dark-mode .readMoreButton{
+    color: #fff;
+}
+
+.content-excerpt{
+    color: rgb(58, 58, 58);
+}
+.dark-mode  .content-excerpt{
+    color: rgb(201, 201, 201);
+}
+
+
+/* 
+ Pagination
+*/
+
+/* Dark mode styles for Bootstrap 5 pagination */
+body.dark-mode .pagination {
+    background-color: transparent;
+}
+
+body.dark-mode .page-link {
+    color: #fff;
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode .page-link:hover {
+    color: #000000;
+    background-color: #555;
+    border-color: #666;
+}
+
+body.dark-mode .page-item.active .page-link {
+    color: #000000;
+    background-color: #f7f7f7;
+    border-color: #ffffff;
+}
+
+body.dark-mode .page-item.disabled .page-link {
+    color: #666;
+    background-color: #333;
+    border-color: #444;
+}
+
+/* Optional: Adjust hover state for disabled pages */
+body.dark-mode .page-item.disabled .page-link:hover {
+    background-color: #333;
+    border-color: #444;
+}

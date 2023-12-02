@@ -16,11 +16,10 @@
     <link rel="stylesheet" href="{{ asset('css/single-post.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
     @stack('styles')
     @livewireStyles
 </head>
@@ -34,7 +33,7 @@
     </div>
     @include('frontend.components.footer')
     @stack('scripts')
-    
+
     <script src="{{ asset('js/script.js') }}"></script>
     @livewireScripts
 </body>

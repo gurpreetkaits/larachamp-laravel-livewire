@@ -47,8 +47,6 @@ Route::middleware('auth')->group(function () {
 Route::resource('about', AboutUs::class);
 
 Route::controller(PostsController::class)->group(function () {
-    Route::get('php', 'phpBlogs')->name('php.index');
-    Route::get('dev-talks', 'devTalks')->name('php.index');
     Route::get('post/{name}', 'show')->name('post.show');
     Route::get('/{category?}', 'index')->name('blogs');
 });
