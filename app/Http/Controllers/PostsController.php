@@ -12,14 +12,14 @@ class PostsController extends Controller
 
     public function show($name)
     {
-        $post = Post::query()->with('user')->where('url', $name)->first();
+        $post = Post::query()->with('user')->where('slug', $name)->first();
         return view('frontend.single-post', compact("post"));
     }
 
     public function index(Request $request, $category = 'all')
     {
         $posts = Post::query()
-            ->where('status', 'published')
+            ->whereNotNull('publish_date')
             ->orderBy('id', 'desc');
 
         if ($category !== 'all') {

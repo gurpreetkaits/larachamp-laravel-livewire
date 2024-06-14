@@ -42,7 +42,7 @@
                 $content = strip_tags($post->content);
                 @endphp
                 <p class="content-excerpt">{{ \Str::limit($content, 200, '...') }}</p>
-                <a href="{{ route('post.show', $post->url) }}" class="readMoreButton">Read
+                <a href="{{ route('post.show', $post->slug) }}" class="readMoreButton">Read
                     more..</a>
             </div>
             @empty

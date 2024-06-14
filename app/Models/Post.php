@@ -10,10 +10,10 @@ class Post extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'title', 'url', 'content', 'status', 'category_id'
+        'author_id',
     ];
 
-    protected $table = 'blogs';
+    protected $table = 'wink_posts';
     public function user()
     {
         return $this->hasOne(User::class, 'id', 'user_id');

@@ -17,7 +17,7 @@
     </div>
     <div class="row mb-5 d-flex justify-content-center">
         <div class="col-lg-8">
-            {!! $post->content !!}
+            {!! $post->body !!}
         </div>
     </div>
 @endsection

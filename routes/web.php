@@ -22,35 +22,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard', function () {
-    return view('admin.home');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-    Route::group(['prefix' => 'admin'],function(){
-        Route::resource('admin/post', PostController::class);
-        Route::resource('category', CategoryController::class);
-        Route::get("tag",TagComponent::class)->name('tag.index');
-        Route::get("tag/create",TagCreateComponent::class)->name('tag.create');
-        // Route::get("tag",TagComponent::class)->name('tag.index');
-        Route::get('/admin/home', function () {
-            return redirect('/dashboard');
-        })->name('admin.home');
-    });
-});
-
 Route::resource('about', AboutUs::class);
 
 Route::controller(PostsController::class)->group(function () {
     Route::get('post/{name}', 'show')->name('post.show');
     Route::get('/{category?}', 'index')->name('blogs');
 });
-
-
 
 require __DIR__ . '/auth.php';
