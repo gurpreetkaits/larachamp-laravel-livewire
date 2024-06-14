@@ -9,6 +9,7 @@ use App\Livewire\AboutUs;
 use App\Livewire\Admin\TagComponent;
 use App\Livewire\Admin\TagCreateComponent;
 use App\Livewire\Blogs;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Log::info('This is the best log viewer');
 
 Route::resource('about', AboutUs::class);
 

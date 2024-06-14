@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
+use Arcanedev\LogViewer\Entities\Log;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log as FacadesLog;
 
 class PostsController extends Controller
 {
 
     public function show($name)
     {
+        FacadesLog::error("this is the error log");
         $post = Post::query()->with('user')->where('slug', $name)->first();
         return view('frontend.single-post', compact("post"));
     }
