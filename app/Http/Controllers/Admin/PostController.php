@@ -7,14 +7,21 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
-        return view('admin.post.index', compact('posts'));
+        $posts = Post::all()->whereNotNull('slug',);
+        return \response()->json(['posts' => $posts]);
+    }
+
+    public function show($slug): \Illuminate\Http\JsonResponse
+    {
+        $post = Post::where('slug',$slug)->firstOrFail();
+        return \response()->json(['post' => $post]);
     }
 
     public function destroy($id)
@@ -42,9 +49,9 @@ class PostController extends Controller
         try {
             Post::query()->create($data);
             return back()->with('success','Post has been created');
-            
+
         } catch (\Throwable $th) {
-            
+
             return back()->withInput(['content','title','slug','category_id']);
         }
     }

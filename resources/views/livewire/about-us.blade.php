@@ -58,77 +58,6 @@
         </div>
     </div>
     <div class="row">
-        {{-- <div class="col-lg-12">
-            <ol class="timeline">
-                <li class="timeline-item">
-                    <span class="timeline-item-icon | avatar-icon">
-                        <i class="avatar">
-                            <img src="https://42works.net/wp-content/uploads/2023/05/unnamed-e1684993275832.png" />
-                        </i>
-                    </span>
-                    <div class="new-comment">
-                        <div class="row">
-                            <div class="col-lg-12">42 Works</div>
-                            <div class="col-lg-12 text-secondary">Nov 2023 - Present </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-item-icon | avatar-icon">
-                        <i class="avatar">
-                            <img src="http://innerxcrm.com/website/assets/images/logo1.png" />
-                        </i>
-                    </span>
-                    <div class="new-comment">
-                        <div class="row">
-                            <div class="col-lg-12">Innerxcrm Informatics</div>
-                            <div class="col-lg-12 text-secondary">May 2023 - Oct 2023 · 6 mos</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-item-icon | avatar-icon">
-                        <i class="avatar bg-light">
-                            <img src="https://www.paradisosolutions.com/wp-content/uploads/2022/09/Logo-GIF-1.gif" />
-                        </i>
-                    </span>
-                    <div class="new-comment">
-                        <div class="row">
-                            <div class="col-lg-12">Paradiso Solutions</div>
-                            <div class="col-lg-12 text-secondary">Dec 2022 - Apr 2023 · 5 mos</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-item-icon | avatar-icon">
-                        <i class="avatar bg-light">
-                            <img src="https://bainslabs.com/wp-content/uploads/2022/02/logo-color-200.png" />
-                        </i>
-                    </span>
-                    <div class="new-comment">
-                        <div class="row">
-                            <div class="col-lg-12">Bainslabs</div>
-                            <div class="col-lg-12 text-secondary">Aug 2022 - Dec 2022 · 5 mos</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-item-icon | avatar-icon">
-                        <i class="avatar">
-                            <img src="{{ asset('images/robindev.png') }}" />
-                        </i>
-                    </span>
-                    <div class="new-comment">
-                        <div class="row">
-                            <div class="col-lg-12">Freelancer (self employed)</div>
-                            <div class="col-lg-12 text-secondary">Nov 2020 - Jul 2022 </div>
-                        </div>
-                    </div>
-                </li>
-            </ol>
-        </div> --}}
-    </div>
-    <div class="row">
         <div class="col-lg-12">
             <p>
                 Well, I think that whenever I write a blog I feel like it’s something that is better for me. And maybe
@@ -144,5 +73,4 @@
         </div>
     </div>
 </div>
-
 @endsection

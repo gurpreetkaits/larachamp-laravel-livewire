@@ -18,7 +18,6 @@ class PostsController extends Controller
         $post = Post::query()->with('user')->where('slug', $name)->first();
         return view('frontend.single-post', compact("post"));
     }
-
     public function index(Request $request, $category = 'all')
     {
         $posts = Post::query()

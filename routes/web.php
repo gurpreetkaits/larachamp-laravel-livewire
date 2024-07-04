@@ -23,13 +23,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Log::info('This is the best log viewer');
-
-Route::resource('about', AboutUs::class);
-
-Route::controller(PostsController::class)->group(function () {
-    Route::get('post/{name}', 'show')->name('post.show');
-    Route::get('/{category?}', 'index')->name('blogs');
+Route::get('/',function (){
+    return to_route('about');
 });
+Route::get('about', AboutUs::class)->name('about');
+Route::get('articles', \App\Livewire\Article::class)->name('article.index');
 
 require __DIR__ . '/auth.php';

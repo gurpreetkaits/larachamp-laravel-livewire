@@ -14,6 +14,7 @@ class Post extends Model
     ];
 
     protected $table = 'wink_posts';
+    
     public function user()
     {
         return $this->hasOne(User::class, 'id', 'user_id');
